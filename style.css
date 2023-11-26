@@ -4,3 +4,9 @@ button, input, optgroup, select, textarea {
   font-size: inherit;
   line-height: inherit;
 }
+body{
+  background-color: aquamarine;
+}
+.reload{
+background-color: rgb(55, 43, 226);
+}
