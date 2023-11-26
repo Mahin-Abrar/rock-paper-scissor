@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>pathor</title>
+</head>
+<body class="container">
+    <div class="row mt-4 ml-5 col-md-12">
+        <h1>ROCK,PAPER,SCISSOR</h1>
+    </div>
+    <div class="row">
+        <div class="col-6 col-md-6"><h2>PLAYER</h2>
+        <h3 class="counterPlayer">Counter-0</h3></div>
+        <div class="col-6 col-md-6"><h2>PC</h2><h3 class="counterPc">Counter-0</h3></div>
+    </div>
+    <div class="row ml-5 movesLeft">10</div>
+    <div class="row"><div class="col-4 col-md-4 col-sm-2"> <button id="button1" class="btn btn-info userButton rock">ROCK</button></div>
+    <div class=" col-4 col-md-4 col-sm-2"> 
+    <button id="button2" class="btn btn-danger userButton paper">PAPER</button></div>
+    <div class="col-4 col-md-4 col-sm-2"> <button id="button3" class="btn btn-warning userButton scissor">SCISSOR</button></div>
+</div>
+<div class="row" id="playerChoice"></div>
+<div class="row">
+    <div class="col-6 col-md-6 playerC"></div>
+    <div class="col-6 col-md-6 pcC"></div>
+</div>
+<div class="row result"></div>
+<button class="reload"> Restart</button> 
+<script src="script.js"></script>
+</body>
+</html>
