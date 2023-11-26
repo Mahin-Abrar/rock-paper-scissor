@@ -19,18 +19,20 @@ userInput.forEach(function (button) {
       pcChoice=Math.floor(Math.random()*3)+1;
       displayP.text("Player picked " + playerChoice);
       displayC.text("PC picked " + choicesPc[pcChoice]);
-      if(moves==1 && pcScore>userScore){
+      if(moves==0 && pcScore>userScore){
          alert("pc wins");
-      }else if(moves==1 && userScore>pcScore){
-        alert("Usser wins");
-      }else if(moves==1 && userScore==pcScore){
+      }else if(moves==0 && userScore>pcScore){
+        alert("User wins");
+      }else if(moves==0 && userScore==pcScore){
         alert("Draw");
       }else{
         results();
       }
       let movesRemain=$(".movesLeft");
-      moves--;
+      if (moves>0){
+        moves--;
       movesRemain.text(moves);
+      }
     });
   });
 
@@ -64,11 +66,11 @@ userInput.forEach(function (button) {
     }else if(playerChoice=="ROCK" && choicesPc[pcChoice]=="SCISSOR"){
         output.html("<hr>"+"User wins");
         userScore++;
-        userCounter.text(userScore);
+        userCounter.html(userScore);
     }else if(playerChoice=="PAPER" && choicesPc[pcChoice]=="SCISSOR"){
-        output.text("<hr>"+"Computer wins");
+        output.html("<hr>"+"Computer wins");
         pcScore++;
-        pcCounter.text(pcScore);
+        pcCounter.html(pcScore);
     }
   }
 
@@ -79,6 +81,6 @@ userInput.forEach(function (button) {
 //reload button functionality
 
 let reloadBtn = $(".reload");
-reloadBtn.on("click", function () {
+reloadBtn.on("click", function() {
   location.reload();
 });
