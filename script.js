@@ -21,6 +21,8 @@ userInput.forEach(function (button) {
          alert("pc wins");
       }else if(moves==1 && userScore>pcScore){
         alert("Usser wins");
+      }else if(moves==1 && userScore==pcScore){
+        alert("Draw");
       }else{
         results();
       }
