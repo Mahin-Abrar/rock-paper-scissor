@@ -9,26 +9,30 @@
     <title>pathor</title>
 </head>
 <body class="container">
-    <div class="row mt-4 ml-5 col-md-12">
+    <div class="row mt-4 ml-5 col-md-12 d-flex justify-content-center">
         <h1>ROCK,PAPER,SCISSOR</h1>
     </div>
+    <hr>
     <div class="row">
         <div class="col-6 col-md-6"><h2>PLAYER</h2>
-        <h3 class="counterPlayer">Counter-0</h3></div>
-        <div class="col-6 col-md-6"><h2>PC</h2><h3 class="counterPc">Counter-0</h3></div>
+        <p class="counterPlayer">Counter-0</p></div>
+        <div class="col-6 col-md-6"><h2>PC</h2><p class="counterPc">Counter-0</p></div>
     </div>
+    <h3>Moves Left</h3>
     <div class="row ml-5 movesLeft">10</div>
-    <div class="row"><div class="col-4 col-md-4 col-sm-2"> <button id="button1" class="btn btn-info userButton rock">ROCK</button></div>
-    <div class=" col-4 col-md-4 col-sm-2"> 
+    <div class="row"><div class="col-4 col-md-4 col-sm-4"> <button id="button1" class="btn btn-info userButton rock">ROCK</button></div>
+    <div class=" col-4 col-md-4 col-sm-4"> 
     <button id="button2" class="btn btn-danger userButton paper">PAPER</button></div>
-    <div class="col-4 col-md-4 col-sm-2"> <button id="button3" class="btn btn-warning userButton scissor">SCISSOR</button></div>
+    <div class="col-4 col-md-4 col-sm-4"> <button id="button3" class="btn btn-warning userButton scissor">SCISSOR</button></div>
 </div>
 <div class="row" id="playerChoice"></div>
+<hr>
 <div class="row">
-    <div class="col-6 col-md-6 playerC"></div>
-    <div class="col-6 col-md-6 pcC"></div>
+    <div class="col-6 col-md-6 playerC">Player Choice</div>
+    <div class="col-6 col-md-6 pcC">PC Choice</div>
 </div>
-<div class="row result"></div>
+<h2 class="row result"></h2>
+<hr>
 <button class="reload"> Restart</button> 
 <script src="script.js"></script>
 </body>

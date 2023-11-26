@@ -15,7 +15,6 @@ userInput.forEach(function (button) {
     button.addEventListener("click", function () {
       playerChoice = button.innerHTML;
       pcChoice=Math.floor(Math.random()*3)+1;
-      
       displayP.text("Player picked " + playerChoice);
       displayC.text("PC picked " + choicesPc[pcChoice]);
       if(moves==1 && pcScore>userScore){
@@ -37,29 +36,29 @@ userInput.forEach(function (button) {
   };
   function results(){
     if(playerChoice==choicesPc[pcChoice]){
-    output.text("Draw");
+    output.html("<hr>"+"Draw");
     }else if (playerChoice=="ROCK" && choicesPc[pcChoice]=="PAPER"){
-        output.text("Computer wins");
+        output.html("<hr>"+"Computer wins");
         pcScore++;
-        pcCounter.text(pcScore);
+        pcCounter.html(pcScore);
     }else if (playerChoice=="PAPER" && choicesPc[pcChoice]=="ROCK"){
-        output.text("User wins");
+        output.html("<hr>"+"User wins");
         userScore++;
-        userCounter.text(userScore);
+        userCounter.html(userScore);
     }else if(playerChoice=="SCISSOR" && choicesPc[pcChoice]=="ROCK"){
-        output.text("Computer wins");
+        output.html("<hr>"+"Computer wins");
         pcScore++;
-        pcCounter.text(pcScore);
+        pcCounter.html(pcScore);
     }else if(playerChoice=="SCISSOR" && choicesPc[pcChoice]=="PAPER"){
-        output.text("User wins");
+        output.html("<hr>"+"User wins");
         userScore++;
-        userCounter.text(userScore);
+        userCounter.html(userScore);
     }else if(playerChoice=="ROCK" && choicesPc[pcChoice]=="SCISSOR"){
-        output.text("User wins");
+        output.html("<hr>"+"User wins");
         userScore++;
         userCounter.text(userScore);
     }else if(playerChoice=="PAPER" && choicesPc[pcChoice]=="SCISSOR"){
-        output.text("Computer wins");
+        output.text("<hr>"+"Computer wins");
         pcScore++;
         pcCounter.text(pcScore);
     }
